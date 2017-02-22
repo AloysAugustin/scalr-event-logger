@@ -11,6 +11,8 @@ services:
     image: elasticsearch:alpine
     volumes:
       - ./data/elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - localhost:9200:9200
   kibana:
     restart: always
     image: kibana:latest

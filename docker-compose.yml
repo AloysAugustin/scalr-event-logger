@@ -2,7 +2,6 @@ version: '2'
 services:
   webhook-handler:
     restart: always
-    build: '.'
     image: event-reporting-webhook
     ports:
       - 5005:5000

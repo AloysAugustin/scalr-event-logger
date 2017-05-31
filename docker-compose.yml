@@ -5,6 +5,8 @@ services:
     image: event-reporting-webhook
     ports:
       - 5005:5000
+    volumes:
+      - ./logs:/var/log
   elasticsearch:
     restart: always
     image: elasticsearch:alpine

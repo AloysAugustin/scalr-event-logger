@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   webhook-handler:
     restart: always
@@ -12,7 +12,7 @@ services:
     volumes:
       - ./data/elasticsearch:/usr/share/elasticsearch/data
     ports:
-      - localhost:9200:9200
+      - 127.0.0.1:9200:9200
   kibana:
     restart: always
     image: kibana:latest
